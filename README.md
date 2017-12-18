@@ -9,7 +9,7 @@ Train and predict type and stage classes with LSTM using 8 features
 
 **IMPORTANT** The length of the sequence must be 50
 
-### Infer the failure modes(type) class for a single observation
+### Infer the failure mode (type) classes for a single observation
 
 ```python
 # Specify model and weights path
@@ -33,7 +33,7 @@ prediction = classifier.predict(x)
 # 1 = {list} <type 'list'>: [[0.8852339386940002, 0.06836230307817459, 0.021053753793239594, 0.00986627209931612, 0.003368750214576721, 0.004927818197757006, 0.007187273818999529]]
 ```
 
-### Infer the failure modes(type) class for multiple observations
+### Infer the failure mode (type) classes for multiple observations
 ```python
 # Specify model and weights path
 model_filename = os.path.join(os.path.dirname(__file__), '../models/type_lstm_v2.json')
