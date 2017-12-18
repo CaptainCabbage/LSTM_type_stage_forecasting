@@ -3,7 +3,7 @@ Train and predict type and stage classes with LSTM using 8 features
 ## Folder structure
 * ```type_classifier.py``` classifies 7 failure types
 * ```stage_classifier.py``` classifies 9 stage types
-    * ~~There are actually 10 stage types. I'll fix the model.~~ Fixed in models version 2 (i.e. *v2.*)
+    * ~~There are actually 10 stage types. I'll fix the model.~~ Fixed in models version 2 (i.e. \*v2.\*)
 
 ## How to use
 
