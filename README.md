@@ -56,6 +56,3 @@ prediction = classifier.predict(x)
 # 0 = {list} <type 'list'>: ['success', 'noscrew', 'no_hole_found', 'crossthread', 'stripped_no_engage', 'stripped', 'partial']
 # 1 = {list} <type 'list'>: [[0.8852339386940002, 0.06836230307817459, 0.021053753793239594, 0.00986627209931612, 0.003368750214576721, 0.004927818197757006, 0.007187273818999529], ...]
 ```
-
-## Training notes
-Because Keras requires sequences of the same length in a batch, we pad zeros at the end of all sequences to match the longest sequence.
