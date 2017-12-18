@@ -19,7 +19,7 @@ weights_filename = os.path.join(os.path.dirname(__file__), '../models/type_lstm_
 # Load the model
 classifier = TypeClassifier(model_filename, weights_filename)
 
-# Generate one observation with 8 feature and of 50 length
+# Generate one observation with 50 sequences and 8 feature
 
 num_timestamps = 50
 num_features = 8
@@ -42,7 +42,7 @@ weights_filename = os.path.join(os.path.dirname(__file__), '../models/type_lstm_
 # Load the model
 classifier = TypeClassifier(model_filename, weights_filename)
 
-# Generate one observation with 8 feature and of 50 length
+# Generate 5 observations with 50 sequences and 8 feature
 
 num_observations = 5
 num_timestamps = 50
