@@ -7,7 +7,7 @@ Train and predict type and stage classes with LSTM using 8 features
 
 ## How to use
 
-**IMPORTANT The length of the sequence must be 50**
+**IMPORTANT** The length of the sequence must be 50
 
 ### Infer the failure modes(type) class for a single observation
 
