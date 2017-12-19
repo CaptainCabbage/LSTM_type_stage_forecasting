@@ -10,20 +10,20 @@ Train and predict type and stage classes with LSTM using 8 features
 Model | Train loss | Train accuracy | Valid loss | Valid accuracy | Test loss | Test accuracy | Description
 ------|------------|----------------|------------|----------------|-----------|---------------|------------
 v1 | 0.6362 | 0.8433 | 0.5260 | 0.8683 | 0.667 | 0.828 | full sequence
-v2 | 0.1303 | 0.9628 | 0.5250 | 0.9005 | 0.495 | 0.884 | sequence of 64 time frames
-v3 | 0.4276 | 0.9280 | 1.8071 | 0.8138 | 1.895 | 0.752 | sequence of 64 time frames with Keras stateful enabled
+v2 | 0.1303 | 0.9628 | 0.5250 | 0.9005 | 0.495 | 0.884 | sequence of 32 time frames
+v3 | 0.4276 | 0.9280 | 1.8071 | 0.8138 | 1.895 | 0.752 | sequence of 32 time frames with Keras stateful enabled
 
 ### Stage classification
 Model | Train loss | Train accuracy | Valid loss | Valid accuracy | Test loss | Test accuracy | Description
 ------|------------|----------------|------------|----------------|-----------|---------------|------------
 v1 | 0.5631 | 0.8630 | 0.4934 | 0.8817 | 0.596 | 0.844 | full sequence
-v2 | 0.0882 | 0.9715 | 0.3694 | 0.9311 | 0.458 | 0.917 | sequence of 64 time frames
-v3 | n/a | n/a | n/a | n/a | 0.864 | 0.851 | sequence of 64 time frames with Keras stateful enabled
+v2 | 0.0882 | 0.9715 | 0.3694 | 0.9311 | 0.458 | 0.917 | sequence of 32 time frames
+v3 | n/a | n/a | n/a | n/a | 0.864 | 0.851 | sequence of 32 time frames with Keras stateful enabled
 
 
 ## How to use
 
-**IMPORTANT** The length of the sequence must be 64
+**IMPORTANT** The length of the sequence must be 32
 
 ### Infer the failure mode (type) classes for a single observation
 
@@ -35,9 +35,9 @@ weights_filename = os.path.join(os.path.dirname(__file__), '../models/type_lstm_
 # Load the model
 classifier = TypeClassifier(model_filename, weights_filename)
 
-# Generate one observation with 64 sequences and 8 feature
+# Generate one observation with 32 sequences and 8 feature
 
-num_timestamps = 64
+num_timestamps = 32
 num_features = 8
 x = numpy.random.rand(num_timestamps, num_features)
 
@@ -58,10 +58,10 @@ weights_filename = os.path.join(os.path.dirname(__file__), '../models/type_lstm_
 # Load the model
 classifier = TypeClassifier(model_filename, weights_filename)
 
-# Generate 5 observations with 64 sequences and 8 feature
+# Generate 5 observations with 32 sequences and 8 feature
 
 num_observations = 5
-num_timestamps = 64
+num_timestamps = 32
 num_features = 8
 x = numpy.random.rand(num_observations, num_timestamps, num_features)
 
@@ -83,9 +83,9 @@ weights_filename = os.path.join(os.path.dirname(__file__), '../models/stage_lstm
 # Load the model
 classifier = TypeClassifier(model_filename, weights_filename)
 
-# Generate one observation with 64 sequences and 8 feature
+# Generate one observation with 32 sequences and 8 feature
 
-num_timestamps = 64
+num_timestamps = 32
 num_features = 8
 x = numpy.random.rand(num_timestamps, num_features)
 
@@ -106,10 +106,10 @@ weights_filename = os.path.join(os.path.dirname(__file__), '../models/stage_lstm
 # Load the model
 classifier = TypeClassifier(model_filename, weights_filename)
 
-# Generate 5 observations with 64 sequences and 8 feature
+# Generate 5 observations with 32 sequences and 8 feature
 
 num_observations = 5
-num_timestamps = 64
+num_timestamps = 32
 num_features = 8
 x = numpy.random.rand(num_observations, num_timestamps, num_features)
 
